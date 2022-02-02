@@ -63,6 +63,12 @@ blockquote {
   padding-left: 2em;
 }
 
+blockquote .source {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
 em,
 cite {
   font-style: normal;
