@@ -183,6 +183,10 @@ p.pub small + br {
     max-width: 100%;
   }
 
+  blockquote {
+    padding-left: 1em;
+  }
+
   aside {
     width: initial;
     position: initial;
