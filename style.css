@@ -7,15 +7,15 @@
     var(--bleed) + var(--sidebar-width) + var(--sidebar-gap)
   );
   --gallery-item-gap: 20px;
-  --body-font-size: 20px;
-  --section-gap: 6rem;
+  --body-font-size: 16px;
+  --section-gap: 4rem;
   --top-gap: 4rem;
   --image-border-radius: 4px;
 }
 
 body {
   margin: 0;
-  font-family: "Crimson Pro", serif;
+  font-family: "IBM Plex Sans", serif;
   font-size: var(--body-font-size);
   line-height: 1.25rem;
   padding-top: var(--top-gap);
@@ -41,21 +41,20 @@ hr {
 
 h1,
 h2 {
-  font-family: "IBM Plex Sans Condensed", sans-serif;
-  font-style: italic;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: bold;
 }
 
 h1 {
   font-size: 60px;
   font-weight: bold;
-  line-height: 0.7em;
+  line-height: 1em;
   margin-bottom: 0;
 }
 
 code,
 pre {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 90%;
 }
 
 blockquote {
