@@ -172,6 +172,11 @@ p.pub small + br {
   display: none;
 }
 
+table.service td:first-child {
+  padding-right: 0.5em;
+  vertical-align: top;
+}
+
 @media all and (max-width: 660px) {
   :root {
     --section-gap: 3rem;
