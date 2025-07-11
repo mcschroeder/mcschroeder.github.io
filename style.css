@@ -345,3 +345,35 @@ body > footer > a {
 body > footer > a:hover {
   color: red;
 }
+
+/*-----------------------------------------------------------------*/
+
+.see-more-toggle {
+  display: none;
+}
+
+.limited-list li {
+  display: none;
+}
+
+.limited-list li:nth-child(-n+4) {
+  display: list-item;
+}
+
+.see-more-toggle:checked ~ .limited-list li {
+  display: list-item;
+}
+
+.see-more-toggle:checked ~ .see-more-label {
+  display: none;
+}
+
+.see-more-label {
+  color: red;
+  cursor: pointer;
+}
+
+.see-more-label:hover {
+  background-color: red;
+  color: white;
+}
