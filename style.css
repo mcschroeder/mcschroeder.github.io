@@ -132,8 +132,11 @@ img {
   border-radius: var(--image-border-radius);
 }
 
-.panini {
+.sc {
   font-variant: small-caps;
+  text-transform: lowercase;
+  font-size: 1.25em;
+  letter-spacing: 0.025em;
 }
 
 p.footnote {

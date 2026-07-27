@@ -90,10 +90,18 @@
 
   <h3 id="grammar-inference">Grammar Inference</h3>
   <p>
-    A parser without a grammar is like a function without a type signature: we can only know if it goes wrong <i>after</i> we have run it. If we knew the grammar beforehand, we could determine valid inputs ahead of time. Unfortunately, most parsers used in practice are written <i>ad&nbsp;hoc</i>, using common string functions like <code>split</code>, <code>trim</code> or <code>slice</code>, without explicitly defining an input grammar.
+    A parser without a grammar is like a function without a type signature: we can only know if it goes wrong <i>after</i> we have run it. If we knew the grammar beforehand, we could determine valid inputs ahead of time. Unfortunately, most parsers used in practice are written <i>ad&nbsp;hoc</i>, using common string functions like <code>split</code>, sequence operations like slicing <code>s[i:j]</code>, or type constructors like <code>int()</code> to effectively perform parsing, without explicitly defining an input grammar.
   </p>
   <p>
-    <b>In my ongoing PhD research, I aim to statically infer input string grammars from unannotated ad hoc parser source code</b>. To this end, I am developing <span class="panini">Panini</span>, a system for automatic end-to-end grammar inference using program slicing, refinement type inference, abstract interpretation, and SMT solving.
+    <b>In my ongoing PhD research, I investigate the extent and nature of ad hoc parsing in real-world code and develop a specification inference framework for reconstructing the hidden grammars of ad hoc parsers.</b>
+    My primary objective is to make the implicit explicit.
+  </p>
+  <p>
+    Two major software artifacts arose out of this work:
+    <ul>
+      <li><a href="https://anonymous.4open.science/r/parsli"><span class="sc">Parsli</span></a>, a static analysis tool to locate Python parser slices based on string data flow and the centerpiece of a high-performance data analysis pipeline for large-scale mining of real-world Python programs.</li>
+      <li><a href="https://github.com/mcschroeder/panini"><span class="sc">Panini</span></a>, an end-to-end grammar inference system written in Haskell, based around a &lambda;&#8209;calculus intermediate representation of parser programs, using refinement type inference and abstract interpretation to solve string constraints and infer regular grammars.</li>
+    </ul>
   </p>
   <p class="footnote">
     Funded in whole or in part by the Austrian Science Fund (FWF) [<a href="https://doi.org/10.55776/PIN3275223">10.55776/PIN3275223</a>].
